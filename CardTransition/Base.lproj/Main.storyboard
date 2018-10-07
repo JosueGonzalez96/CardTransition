@@ -1,24 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CTMainVC" customModule="CardTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="agj-P6-Y3n">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AXf-7l-oGc">
+                                    <size key="itemSize" width="347" height="450"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="card" id="vzp-z1-kwB" customClass="CTMainCell" customModule="CardTransition" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="108.5" width="347" height="450"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="347" height="450"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBQ-dk-p7S" customClass="CardContentView" customModule="CardTransition" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="347" height="450"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="pBQ-dk-p7S" secondAttribute="trailing" id="AoA-nD-DRW"/>
+                                            <constraint firstItem="pBQ-dk-p7S" firstAttribute="top" secondItem="vzp-z1-kwB" secondAttribute="top" id="CU6-ix-YSp"/>
+                                            <constraint firstAttribute="bottom" secondItem="pBQ-dk-p7S" secondAttribute="bottom" id="Fo8-Ze-Je9"/>
+                                            <constraint firstItem="pBQ-dk-p7S" firstAttribute="leading" secondItem="vzp-z1-kwB" secondAttribute="leading" id="QLK-cG-7zb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cardContentView" destination="pBQ-dk-p7S" id="okO-qv-heu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ssV-K7-rUZ">
+                                        <rect key="frame" x="357" y="108.5" width="347" height="450"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="347" height="450"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="agj-P6-Y3n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ea7-2V-BpP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="agj-P6-Y3n" secondAttribute="bottom" id="Q5c-lD-5ej"/>
+                            <constraint firstItem="agj-P6-Y3n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TRr-1i-Sa3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="agj-P6-Y3n" secondAttribute="trailing" id="jZ2-83-xwa"/>
+                            <constraint firstItem="agj-P6-Y3n" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="udT-Xd-tms"/>
+                            <constraint firstItem="agj-P6-Y3n" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zQo-em-Qvx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="agj-P6-Y3n" id="DbA-Hh-WOj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-356" y="165"/>
+        </scene>
+        <!--Detail ItemVC-->
+        <scene sceneID="Vea-la-JM9">
+            <objects>
+                <viewController storyboardIdentifier="CTDetailItemVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7xm-tT-Rbd" customClass="CTDetailItemVC" customModule="CardTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bpI-cr-OP6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4X-ds-J3X">
+                                <rect key="frame" x="0.0" y="20" width="375" height="1980"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2k-g1-Gqq" customClass="CardContentView" customModule="CardTransition" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="461"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="A2k-g1-Gqq" secondAttribute="height" multiplier="375:461" id="0kh-bd-3fT"/>
+                                        </constraints>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lP5-td-yar">
+                                        <rect key="frame" x="8" y="469" width="359" height="808"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="808" id="rA2-Bt-0xm"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="A2k-g1-Gqq" firstAttribute="centerX" secondItem="w4X-ds-J3X" secondAttribute="centerX" id="BQt-AD-Nbm"/>
+                                    <constraint firstItem="A2k-g1-Gqq" firstAttribute="top" secondItem="w4X-ds-J3X" secondAttribute="top" id="P1e-ll-mou"/>
+                                    <constraint firstItem="lP5-td-yar" firstAttribute="leading" secondItem="w4X-ds-J3X" secondAttribute="leading" constant="8" id="TNZ-Lu-kHD"/>
+                                    <constraint firstItem="A2k-g1-Gqq" firstAttribute="leading" secondItem="w4X-ds-J3X" secondAttribute="leading" id="Yj1-bc-JhA"/>
+                                    <constraint firstAttribute="trailing" secondItem="A2k-g1-Gqq" secondAttribute="trailing" id="d5X-IC-kCo"/>
+                                    <constraint firstAttribute="bottom" secondItem="lP5-td-yar" secondAttribute="bottom" constant="703" id="feP-3Y-ZY7"/>
+                                    <constraint firstItem="lP5-td-yar" firstAttribute="top" secondItem="A2k-g1-Gqq" secondAttribute="bottom" constant="8" id="qZz-MK-KDL"/>
+                                    <constraint firstAttribute="trailing" secondItem="lP5-td-yar" secondAttribute="trailing" constant="8" id="wml-v9-LxT"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w4X-ds-J3X" firstAttribute="leading" secondItem="bbB-re-eOS" secondAttribute="leading" id="1N9-MP-gzQ"/>
+                            <constraint firstItem="bbB-re-eOS" firstAttribute="bottom" secondItem="w4X-ds-J3X" secondAttribute="bottom" id="890-O0-ThQ"/>
+                            <constraint firstItem="w4X-ds-J3X" firstAttribute="top" secondItem="bbB-re-eOS" secondAttribute="top" id="B83-y3-cil"/>
+                            <constraint firstItem="bbB-re-eOS" firstAttribute="trailing" secondItem="w4X-ds-J3X" secondAttribute="trailing" id="cdc-pp-U5K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bbB-re-eOS"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="2000"/>
+                    <connections>
+                        <outlet property="cardContentView" destination="A2k-g1-Gqq" id="TYc-da-7qk"/>
+                        <outlet property="scrollView" destination="w4X-ds-J3X" id="qeC-nF-JFh"/>
+                        <outlet property="textView" destination="lP5-td-yar" id="ICL-mP-QSX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3z-mo-0R2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496.80000000000001" y="-69.265367316341838"/>
         </scene>
     </scenes>
 </document>

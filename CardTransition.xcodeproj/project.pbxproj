@@ -14,6 +14,16 @@
 		DC0E241521689DD8003E799C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0E241321689DD8003E799C /* LaunchScreen.storyboard */; };
 		DC0E242021689DD8003E799C /* CardTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0E241F21689DD8003E799C /* CardTransitionTests.swift */; };
 		DC0E242B21689DD8003E799C /* CardTransitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0E242A21689DD8003E799C /* CardTransitionUITests.swift */; };
+		DC0E243F2168A4C8003E799C /* AnimatableStatusBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0E243D2168A4C8003E799C /* AnimatableStatusBarViewController.swift */; };
+		DC0E24402168A4C8003E799C /* CardToDetailTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0E243E2168A4C8003E799C /* CardToDetailTransitionManager.swift */; };
+		DC0E24422168A4D0003E799C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0E24412168A4D0003E799C /* Extensions.swift */; };
+		DC0E24462168AA2D003E799C /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0E24442168AA2D003E799C /* CardContentView.swift */; };
+		DC0E24472168AA2D003E799C /* CardContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0E24452168AA2D003E799C /* CardContentView.xib */; };
+		DC0E244B2168AB10003E799C /* CTDetailItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0E244A2168AB10003E799C /* CTDetailItemVC.swift */; };
+		DC0E244D2168AB1C003E799C /* CTMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0E244C2168AB1C003E799C /* CTMainVC.swift */; };
+		DC0E24502168ABD3003E799C /* CardCollectionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0E244F2168ABD3003E799C /* CardCollectionViewCellViewModel.swift */; };
+		DC0E24532168ADBA003E799C /* CTMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0E24522168ADBA003E799C /* CTMainCell.swift */; };
+		DC0E24552168BA09003E799C /* monument-valley.png in Resources */ = {isa = PBXBuildFile; fileRef = DC0E24542168BA09003E799C /* monument-valley.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +57,16 @@
 		DC0E242621689DD8003E799C /* CardTransitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardTransitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0E242A21689DD8003E799C /* CardTransitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransitionUITests.swift; sourceTree = "<group>"; };
 		DC0E242C21689DD8003E799C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC0E243D2168A4C8003E799C /* AnimatableStatusBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableStatusBarViewController.swift; sourceTree = "<group>"; };
+		DC0E243E2168A4C8003E799C /* CardToDetailTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardToDetailTransitionManager.swift; sourceTree = "<group>"; };
+		DC0E24412168A4D0003E799C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DC0E24442168AA2D003E799C /* CardContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
+		DC0E24452168AA2D003E799C /* CardContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardContentView.xib; sourceTree = "<group>"; };
+		DC0E244A2168AB10003E799C /* CTDetailItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTDetailItemVC.swift; sourceTree = "<group>"; };
+		DC0E244C2168AB1C003E799C /* CTMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTMainVC.swift; sourceTree = "<group>"; };
+		DC0E244F2168ABD3003E799C /* CardCollectionViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCellViewModel.swift; sourceTree = "<group>"; };
+		DC0E24522168ADBA003E799C /* CTMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTMainCell.swift; sourceTree = "<group>"; };
+		DC0E24542168BA09003E799C /* monument-valley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monument-valley.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +117,11 @@
 		DC0E240921689DD8003E799C /* CardTransition */ = {
 			isa = PBXGroup;
 			children = (
-				DC0E243821689F4F003E799C /* CardTransitionResource */,
-				DC0E243921689F4F003E799C /* CTViewControllers */,
+				DC0E24542168BA09003E799C /* monument-valley.png */,
+				DC0E244E2168ABD3003E799C /* CTModels */,
+				DC0E243B2168A3E7003E799C /* CardTransitionResource */,
+				DC0E243A2168A3E7003E799C /* CTExtensions */,
+				DC0E243C2168A3E7003E799C /* CTViewControllers */,
 				DC0E240A21689DD8003E799C /* AppDelegate.swift */,
 				DC0E240C21689DD8003E799C /* ViewController.swift */,
 				DC0E240E21689DD8003E799C /* Main.storyboard */,
@@ -127,18 +150,73 @@
 			path = CardTransitionUITests;
 			sourceTree = "<group>";
 		};
-		DC0E243821689F4F003E799C /* CardTransitionResource */ = {
+		DC0E243A2168A3E7003E799C /* CTExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				DC0E24412168A4D0003E799C /* Extensions.swift */,
+			);
+			path = CTExtensions;
+			sourceTree = "<group>";
+		};
+		DC0E243B2168A3E7003E799C /* CardTransitionResource */ = {
+			isa = PBXGroup;
+			children = (
+				DC0E24432168AA2D003E799C /* CTViews */,
+				DC0E243D2168A4C8003E799C /* AnimatableStatusBarViewController.swift */,
+				DC0E243E2168A4C8003E799C /* CardToDetailTransitionManager.swift */,
 			);
 			path = CardTransitionResource;
 			sourceTree = "<group>";
 		};
-		DC0E243921689F4F003E799C /* CTViewControllers */ = {
+		DC0E243C2168A3E7003E799C /* CTViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC0E24492168AAFC003E799C /* CTDetailItemVC */,
+				DC0E24482168AAFC003E799C /* CTMainVC */,
 			);
 			path = CTViewControllers;
+			sourceTree = "<group>";
+		};
+		DC0E24432168AA2D003E799C /* CTViews */ = {
+			isa = PBXGroup;
+			children = (
+				DC0E24442168AA2D003E799C /* CardContentView.swift */,
+				DC0E24452168AA2D003E799C /* CardContentView.xib */,
+			);
+			path = CTViews;
+			sourceTree = "<group>";
+		};
+		DC0E24482168AAFC003E799C /* CTMainVC */ = {
+			isa = PBXGroup;
+			children = (
+				DC0E24512168AD3A003E799C /* CTMainCell */,
+				DC0E244C2168AB1C003E799C /* CTMainVC.swift */,
+			);
+			path = CTMainVC;
+			sourceTree = "<group>";
+		};
+		DC0E24492168AAFC003E799C /* CTDetailItemVC */ = {
+			isa = PBXGroup;
+			children = (
+				DC0E244A2168AB10003E799C /* CTDetailItemVC.swift */,
+			);
+			path = CTDetailItemVC;
+			sourceTree = "<group>";
+		};
+		DC0E244E2168ABD3003E799C /* CTModels */ = {
+			isa = PBXGroup;
+			children = (
+				DC0E244F2168ABD3003E799C /* CardCollectionViewCellViewModel.swift */,
+			);
+			path = CTModels;
+			sourceTree = "<group>";
+		};
+		DC0E24512168AD3A003E799C /* CTMainCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC0E24522168ADBA003E799C /* CTMainCell.swift */,
+			);
+			path = CTMainCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +326,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0E24472168AA2D003E799C /* CardContentView.xib in Resources */,
 				DC0E241521689DD8003E799C /* LaunchScreen.storyboard in Resources */,
+				DC0E24552168BA09003E799C /* monument-valley.png in Resources */,
 				DC0E241221689DD8003E799C /* Assets.xcassets in Resources */,
 				DC0E241021689DD8003E799C /* Main.storyboard in Resources */,
 			);
@@ -275,7 +355,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0E24422168A4D0003E799C /* Extensions.swift in Sources */,
+				DC0E24532168ADBA003E799C /* CTMainCell.swift in Sources */,
+				DC0E24402168A4C8003E799C /* CardToDetailTransitionManager.swift in Sources */,
+				DC0E24502168ABD3003E799C /* CardCollectionViewCellViewModel.swift in Sources */,
 				DC0E240D21689DD8003E799C /* ViewController.swift in Sources */,
+				DC0E243F2168A4C8003E799C /* AnimatableStatusBarViewController.swift in Sources */,
+				DC0E244B2168AB10003E799C /* CTDetailItemVC.swift in Sources */,
+				DC0E24462168AA2D003E799C /* CardContentView.swift in Sources */,
+				DC0E244D2168AB1C003E799C /* CTMainVC.swift in Sources */,
 				DC0E240B21689DD8003E799C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
